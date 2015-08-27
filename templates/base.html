@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magnum - {% block title %}{% endblock %}</title>
+
+    {% block head %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css', _external=True)}}">
+
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    {% endblock %}
+  </head>
+
+  <body>
+    <h1><a href="{{ url_for('index')}}">Magnum</a></h1>
+
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
