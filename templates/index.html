@@ -3,10 +3,17 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-  <h2>What are you looking for?</h2>
+  {{ super() }}
 
-  {{ moment.include_moment() }}
+  <h2>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}.</h2>
 
-  <p>The current date is {{ moment(current_time).format('LLL') }}.</p>
-  <p>That was {{ moment(current_time).fromNow(refresh=True) }}.</p>
+
+  <form action="{{ url_for('index')}}" method="post">
+    {{ form.csrf_token }}
+
+    {{ form.name.label }}
+    {{ form.name }}
+
+    {{ form.submit }}
+  </form>
 {% endblock %}

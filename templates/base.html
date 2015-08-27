@@ -14,6 +14,9 @@
     <h1><a href="{{ url_for('index')}}">Magnum</a></h1>
 
     {% block content %}
+      {% for msg in get_flashed_messages() %}
+        {{ msg }}
+      {% endfor %}
     {% endblock %}
   </body>
 </html>
