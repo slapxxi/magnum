@@ -1,6 +1,6 @@
 # Magnum - Flask Application
 
-It's purpose is to learn how to develop web applications with Flask.
+Its purpose is to learn how to develop web applications with Flask.
 
 
 ## Flask
